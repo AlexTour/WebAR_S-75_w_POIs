@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+    <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+  </head>
+  <body>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="S-75_001_Unlit_No_Metallic-v1.glb" ar ar-modes="scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
+      <button class="Hotspot" slot="hotspot-2" data-position="0.004988321467262136m 9.812534398887601m -0.018719707574957667m" data-normal="0.18951198835200386m 0.23904765341874196m -0.9523347235430739m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Warhead</div>
+      </button><button class="Hotspot" slot="hotspot-3" data-position="-0.04932428465918015m 0.3965721282594519m 0.08311244741664581m" data-normal="0.4422812047859586m 5.8590101016376594e-8m -0.8968764329009195m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Booster</div>
+      </button><button class="Hotspot" slot="hotspot-4" data-position="-0.2854632124215626m 3.462001571763536m -0.34884873931390814m" data-normal="0.7826046282587833m -0.0042486285046329396m -0.6225045742673392m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Steering </div>
+      </button><button class="Hotspot" slot="hotspot-5" data-position="0.09304699637580072m 7.679919906684845m -0.21120567862722694m" data-normal="0.44228228428018385m 3.335083589977652e-8m -0.8968759005636743m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Guiding System</div>
+      </button>
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+    </model-viewer>  
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  </body>
+</html>
